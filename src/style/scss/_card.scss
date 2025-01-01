@@ -1,0 +1,145 @@
+.project-card {
+    border: 1px solid $border;
+    border-radius: 8px;
+    padding: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 270px;
+    font-size: 12px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+
+  
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card-text{
+      color : $text-color;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .date-text{
+      color : $card-date;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .progress-bar {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  
+      .start,
+      .end {
+        font-size: 13px;
+        color: $text-color;
+      }
+  
+      .bar {
+        flex: 1;
+        height: 14px;
+        background: $gray;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+  
+        .percentage {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-weight: 700;
+          font-size: 12px;
+          color: $black;
+          z-index: 2; /* Ensures text stays above the progress bar */
+          white-space: nowrap;
+        }
+  
+        .progress {
+          height: 100%;
+          background: $light-green-color;
+          border-radius: 4px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+      }
+    }
+  
+    .details {
+      .info span {
+        margin-right: 8px;
+      }
+    }
+  }
+
+
+
+  .project-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+  .date-section{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border;
+
+  }
+
+  .flex-section{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+  }
+
+  .flex-center{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+  span {
+    img {
+      height: 32px;
+      width: auto;
+      object-fit: cover; 
+    }
+  }
+
+  .card-status {
+    color: $text-color-light;
+    border-radius: $border-radius8;
+    padding: $padding-medium;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+
+  .project-inner-card{
+    border: 1px solid $border;
+    border-radius: 8px;
+    padding: 12px 12px 0px 12px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 270px;
+    font-size: 12px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,175 @@
+.project-container {
+  background-color: $white;
+  margin-left : 70px;
+  margin-top : 70px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .add-project {
+        background-color: $button;
+        border: none;
+        border-radius: $border-radius8;
+        padding: 0.5rem 1rem;
+        color: $white;
+        border: 1px solid $button;
+        box-shadow: 0px 1px 5px 0px #2d446e1a;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+
+    .breadcrumb {
+      span {
+        font-size: 0.9rem;
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+
+    .filter-left,
+    .filter-right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .project-card {
+    .project-status {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 10px;
+
+      .status {
+        color: $text-color-light;
+        border-radius: $border-radius;
+        padding: $padding-small;
+        width: fit-content;
+      }
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+
+      .project-section {
+        border: 1px solid lighten($secondary-color, 40%);
+        padding: 10px;
+        border-radius: $border-radius;
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        .project-section {
+          padding: 8px;
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  font-size: 32px;
+  color: $text-color;
+  font-weight: 500;
+}
+
+.project-button {
+  color: $button;
+  border: 1px solid $button;
+  box-shadow: 0px 1px 5px 0px #2d446e1a;
+}
+
+.dashboard {
+  color: $brown-text;
+  text-shadow: 5px 5px 8px $brown-text;
+  font-weight: 400;
+}
+.project-overview {
+  color: $blue-text;
+  text-shadow: 5px 5px 8px $blue-text;
+  font-weight: 400;
+}
+
+.all-project {
+  font-size: 20px;
+  font-weight: 600;
+  color: $button;
+}
+
+.view-more {
+  text-decoration: underline;
+  color: $blue-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.badge-position {
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+
+.full-width-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 20px;
+  background-color: #fff;
+}
+
+.access-point {
+  font-size: 10px;
+  border-radius: $border-radius8;
+  border: 1px solid $button;
+  color: $button;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  background: $white;
+  font-weight: 700;
+}
+
+.access-point-container {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}

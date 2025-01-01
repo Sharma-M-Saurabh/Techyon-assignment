@@ -1,0 +1,88 @@
+.top-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: $button;
+  color: $white;
+  border-bottom: 1px solid $border-color;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+}
+
+.container {
+  margin-top: 60px;
+  height: 100vh; 
+  overflow-y: auto; 
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .profile-img {
+    height: 40px;
+  }
+}
+
+.layout {
+  display: flex;
+  background-color: #f0f0f0;
+
+  .sidebar {
+    border-right: 1px solid $border-color;
+    color: $white;
+    padding: 100px 10px;
+    position: fixed;
+    left: 0;
+    background-color: $button;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    .content-wrapper {
+      background-color: $background-content;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: $box-shadow;
+      text-align: center;
+
+      h1 {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+.gap {
+  gap: 15px;
+}
+
+.border-right {
+  border-right: 1px solid $button;
+  padding: 10px;
+}

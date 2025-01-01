@@ -1,0 +1,153 @@
+.grey {
+  background-color: $dark-gray;
+}
+
+.blue-color {
+  background-color: $blue;
+}
+
+.primary-green {
+  background-color: $primary-green;
+}
+.dark-green {
+  background-color: $dark-green-color;
+}
+.dark-blue {
+  background-color: $review;
+}
+.dark-black {
+  background-color: $revision;
+}
+
+.bg-review {
+  background-color: $review;
+}
+.bg-track {
+  background-color: $track;
+}
+.bg-revision {
+  background-color: $revision;
+}
+.bg-delayed {
+  background-color: $delayed;
+}
+
+.table-header {
+  @include table-alignment;
+  gap: 5px;
+
+  div {
+    &:first-child {
+      @include table-alignment;
+      color: $icon-color;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &:last-child {
+      color: $text-dark;
+      font-weight: bold;
+    }
+  }
+}
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  background-color: $white;
+  border-radius: $border-radius;
+  border: 1px solid $dark-gray;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: $font-family;
+    font: $table-size;
+
+    thead {
+      tr {
+        th {
+          background-color: $gray;
+          color: $text-dark;
+          font-weight: bold;
+          padding: 10px 15px;
+          text-align: left;
+          border-bottom: 2px solid $dark-gray;
+          border-left: 1px solid $text-dark;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: $gray;
+        }
+
+        td {
+          padding: 10px 15px;
+          border-bottom: 1px solid $text-dark;
+          vertical-align: middle;
+          border-left: 1px solid $text-dark;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+
+        .owner {
+          @include table-alignment;
+          gap: 10px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+
+          span {
+            color: $text-dark;
+          }
+        }
+
+        .tasks {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .progressBar {
+            position: relative;
+            height: 10px;
+            width: 100px;
+            background-color: $dark-gray;
+            border-radius: $border-radius;
+            overflow: hidden;
+
+            .progress {
+              height: 100%;
+              width: 50%; 
+              background-color: $primary-green;
+            }
+          }
+
+          .percentage {
+            color: $text-dark;
+            font-weight: bold;
+          }
+        }
+
+        .status {
+          color: $text-dark;
+          text-align: center;
+          background-color: $gray;
+          border-radius: $border-radius;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+}
