@@ -1,22 +1,22 @@
 .project-container {
   background-color: $white;
-  margin-left : 70px;
-  margin-top : 70px;
+  margin-left: 70px;
+  margin-top: 70px;
 
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+  
     .header-content {
       display: flex;
       align-items: center;
       gap: 20px;
-
+  
       h1 {
         font-size: 2rem;
       }
-
+  
       .add-project {
         background-color: $button;
         border: none;
@@ -26,23 +26,91 @@
         border: 1px solid $button;
         box-shadow: 0px 1px 5px 0px #2d446e1a;
         cursor: pointer;
-
+  
         &:hover {
           background-color: darken($primary-color, 10%);
         }
       }
     }
-
+  
     .breadcrumb {
       span {
         font-size: 0.9rem;
-
+  
         span {
           font-weight: bold;
         }
       }
     }
+  
+    // Responsive adjustments
+    @media (max-width: 1024px) {
+      .header-content {
+        h1 {
+          font-size: 1.8rem; // Slightly smaller font size for tablets
+        }
+  
+        .add-project {
+          padding: 0.4rem 0.8rem; // Adjust padding for smaller screens
+        }
+      }
+  
+      .breadcrumb {
+        span {
+          font-size: 0.85rem; // Smaller breadcrumb font for tablets
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column; // Stack the header content vertically
+      align-items: flex-start;
+  
+      .header-content {
+        width: 100%; // Full width for smaller screens
+        justify-content: space-between;
+  
+        h1 {
+          font-size: 1.5rem; // Smaller font size for smaller devices
+        }
+  
+        .add-project {
+          padding: 0.3rem 0.7rem; // Further reduce padding
+          font-size: 0.9rem; // Adjust button font size
+        }
+      }
+  
+      .breadcrumb {
+        width: 100%; // Full width for breadcrumbs
+        text-align: left; // Align breadcrumbs to the left
+        span {
+          font-size: 0.8rem; // Adjust breadcrumb font size
+        }
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .header-content {
+        gap: 10px; // Reduce gap for extra small screens
+  
+        h1 {
+          font-size: 1.2rem; // Even smaller font size for very small screens
+        }
+  
+        .add-project {
+          padding: 0.2rem 0.5rem; // Compact button
+          font-size: 0.8rem; // Smaller button font size
+        }
+      }
+  
+      .breadcrumb {
+        span {
+          font-size: 0.75rem; // Smaller font size for breadcrumbs
+        }
+      }
+    }
   }
+  
 
   .filter-section {
     display: flex;
@@ -74,8 +142,55 @@
         padding: $padding-small;
         width: fit-content;
       }
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, auto);
+        gap: 8px;
+
+        .status {
+          padding: $padding-small;
+        }
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 6px;
+
+        .status {
+          padding: calc(#{$padding-small} * 0.9);
+        }
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+        gap: 5px;
+
+        .status {
+          padding: calc(#{$padding-small} * 0.8);
+        }
+      }
     }
 
+    // .project-grid {
+    //   display: grid;
+    //   grid-template-columns: repeat(4, 1fr);
+    //   gap: 15px;
+
+    //   .project-section {
+    //     border: 1px solid lighten($secondary-color, 40%);
+    //     padding: 10px;
+    //     border-radius: $border-radius;
+    //   }
+
+    //   @media (max-width: 768px) {
+    //     grid-template-columns: 1fr;
+    //     gap: 10px;
+
+    //     .project-section {
+    //       padding: 8px;
+    //     }
+    //   }
+    // }
     .project-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -87,12 +202,32 @@
         border-radius: $border-radius;
       }
 
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+
+        .project-section {
+          padding: 10px;
+        }
+      }
+
+      // For small devices (landscape phones and smaller tablets)
       @media (max-width: 768px) {
         grid-template-columns: 1fr;
         gap: 10px;
 
         .project-section {
           padding: 8px;
+        }
+      }
+
+      // For extra small devices (portrait phones)
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+        gap: 8px;
+
+        .project-section {
+          padding: 6px;
         }
       }
     }
