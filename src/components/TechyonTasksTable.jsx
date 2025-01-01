@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import {
   AccessPoint,
+  Bell,
   EndDateIcon,
   FolderIcon,
   OwnerIcon,
   StartDateIcon,
   StatusIcon,
+  TaskBell,
   TaskIcon,
   ViewDetails,
 } from "../assets/Icons";
@@ -115,7 +117,12 @@ const TechyonTaskTable = () => {
                 <div>Task Name</div>
               </div>
             </th>
-            <th>%</th>
+            <th><div className="table-header">
+                <div>
+                  <TaskBell />
+                </div>
+                <div>Task Name</div>
+              </div></th>
             <th>
               <div className="table-header">
                 <div>
